@@ -1,6 +1,6 @@
 import clientes.*
 import remiseras.*
-
+import oficinaDeLaCooperativa.*
 test "viaje con remisera Roxana a una distancia de 10 kilómetros"{
 	assert.equals(180, roxana.precioViaje(ludmila, 10))
 	assert.equals(300, roxana.precioViaje(anaMaria, 10))
@@ -81,15 +81,32 @@ test "Lucía reemplaza a la remisera Mariela y Melina reemplaza a la clienta Lud
 
 
 test "Lucía reemplaza a la remisera Gabriela y Melina reemplaza a la clienta Ludmila por un viaje de 10 kliómetros"{
-	lucia.estaReemplazando(mariela)
+	lucia.estaReemplazando(gabriela)
 	melina.TrabajaPara(ludmila)
-	assert.equals(150, lucia.precioViaje(melina, 10))
+	assert.equals(180, lucia.precioViaje(melina, 10))
+	
+}
+
+test "Lucía reemplaza a la remisera Gabriela y Melina reemplaza a la clienta Ludmila por un viaje de 1 kliómetro"{
+	lucia.estaReemplazando(gabriela)
+	melina.TrabajaPara(ludmila)
+	assert.equals(18, lucia.precioViaje(melina, 1))
 	
 }
 
 
+test "la primera opcion de remisera es Roxana y la segunda opcion es Juana y el viaje es para ana María"{
+	oficina.asignarRemiseras(roxana, juana)
+	assert.equals(juana, oficina.remiseraElegidaParaViaje(anaMaria, 10))
+}
 
+test "la primera opcion de remisera es Roxana y la segunda opcion es Juana y el viaje es para Teresa"{
+		oficina.asignarRemiseras(roxana, juana)
+		assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 10))
+}
 
-
-
+test "la primera opcion de remisera es Roxana y la segunda opcion es Juana y el viaje es para Teresa y el viaje es de 4 kilómetros"{
+		oficina.asignarRemiseras(roxana, juana)
+		assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4))
+}
 
