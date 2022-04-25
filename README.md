@@ -1,4 +1,4 @@
-# Viajes en auto
+# Viajes en auto - Palma Nahuel Martín
  
 [![Build Status](https://travis-ci.org/wollok/viajesEnAuto.svg?branch=master)](https://travis-ci.org/wollok/viajesEnAuto)
 
