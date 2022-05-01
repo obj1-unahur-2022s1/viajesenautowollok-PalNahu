@@ -1,21 +1,21 @@
+/*
+ * Clientes: Bien - Deje comentarios en algunos métodos
+ */
+
 object ludmila{
-	
-	method precioPorKm(){
-		return 18
-	}
+	/* Te dejo otra forma de escribir el método */
+	method precioPorKm() = 18
 }
 
 object anaMaria{
+	/*Falto el método para cambiar el atributo estaEconomicamenteEstable a false */
 	var estaEconomicamenteEstable = true
-	
-	method precioPorKm(){
-		if (estaEconomicamenteEstable){
-			return 30
-		}
-		else{
-			return 25
-		}
+	method estaEconomicamenteEstable(unBooleano){
+		estaEconomicamenteEstable = unBooleano
 	}
+	/*Te dejo otra forma de escribir el método */
+	method precioPorKm() = if (estaEconomicamenteEstable){30}else{25}
+	
 }
 
 object teresa{

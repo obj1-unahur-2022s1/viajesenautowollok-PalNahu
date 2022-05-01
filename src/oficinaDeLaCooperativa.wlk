@@ -19,11 +19,10 @@ object oficina {
 	}
 	
 	method intercambiarRemiseras(){
-		var primeraRemisera = primeraOpcion
-		var segundaRemisera = segundaOpcion
-		
-		primeraOpcion = segundaRemisera
-		segundaOpcion = primeraRemisera
+		/*
+		 * Debias llamar al método asignarRemiseras con self.asignarRemiseras(r2,r1)
+		 */
+		 self.asignarRemiseras(segundaOpcion,primeraOpcion )
 	}
 	
 	method remiseraElegidaParaViaje(cliente, kms){
