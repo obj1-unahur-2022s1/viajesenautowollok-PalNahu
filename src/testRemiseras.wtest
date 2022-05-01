@@ -1,3 +1,8 @@
+/*
+ * Los test esta muy bien
+ * Buena decision de agrupar por ojetos en forma independiente
+ */
+
 import clientes.*
 import remiseras.*
 import oficinaDeLaCooperativa.*

@@ -1,3 +1,6 @@
+/*
+ * Remiseras: Muy Bien - Revisar juana  
+ */
 import clientes.*
 
 object roxana{
@@ -19,7 +22,7 @@ object mariela{
 
 object juana{
 	
-	method precioViaje(cliente, km) = if (km <= 8) {(cliente.precioPorKm()*0) + 100} else {(cliente.precioPorKm()*0) + 200}
+	method precioViaje(cliente, km) = if (km <= 8) {100} else {200}
 	
 }
 
